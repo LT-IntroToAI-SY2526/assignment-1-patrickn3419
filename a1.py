@@ -70,24 +70,30 @@ Input:
 Output:
   7 is an odd number.
 """
-def check_even_odd(number):
+def check_even_odd(number): # def declares a function(variable)
     if number % 2 == 0:
         print(f"{number} is even.")
     else:
         print(f"{number} is odd.")
 
 """
-PROBLEM 3: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
-
-Example:
-Problem: Write a function called 'is_even' that takes an integer and returns 
-True if the number is even, False if it's odd.
+PROBLEM 3: Password Checker
+Problem: Write a program that checks a user-entered password
 
 Example inputs/outputs:
-- is_even(4) should return True
-- is_even(7) should return False
+Input:
+  Enter password: admin123
+
+Output:
+  Access granted!
 """
+password = input("Enter password") # Asks the user for a password
+if password == "admin": # Checks to see if the entered password is "admin"
+    print("Access Granted!")
+elif password == "": # Elif checks after an if, stands for "else if"
+    print("Please enter a password.")
+else:
+    print("Access Denied.")
 
 """
 PROBLEM 4: [Problem Title/Description]
