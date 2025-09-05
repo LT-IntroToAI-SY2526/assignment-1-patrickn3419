@@ -42,7 +42,42 @@ cover..."
 # =============================================================================
 
 """
-PROBLEM 1: [Problem Title/Description]
+PROBLEM 1: Warm-Up: Favorite Color
+
+Problem: Write a Python program that asks the user for their name and favorite color, then prints a sentence using both inputs.
+
+Example inputs/outputs:
+Input:
+  Enter your name: Alex
+  Enter your favorite color: blue
+
+Output:
+  Hi Alex! I heard your favorite color is blue.
+"""
+name = input("Enter your name: ")
+color = input("Enter you favorite color: ")
+print("Hi " + name + "! Your favorite color is " + color + ".")
+
+"""
+PROBLEM 2: Even or Odd Checker
+
+Problem: Write a function called check_even_odd(number) that: Takes one parameter: a number, and prints whether the number is even or odd
+
+Example inputs/outputs:
+Input:
+  Enter a number: 7
+
+Output:
+  7 is an odd number.
+"""
+def check_even_odd(number):
+    if number % 2 == 0:
+        print(f"{number} is even.")
+    else:
+        print(f"{number} is odd.")
+
+"""
+PROBLEM 3: [Problem Title/Description]
 [Copy the complete problem description from your AI assistant]
 
 Example:
@@ -54,7 +89,57 @@ Example inputs/outputs:
 - is_even(7) should return False
 """
 
+"""
+PROBLEM 4: [Problem Title/Description]
+[Copy the complete problem description from your AI assistant]
 
+Example:
+Problem: Write a function called 'is_even' that takes an integer and returns 
+True if the number is even, False if it's odd.
+
+Example inputs/outputs:
+- is_even(4) should return True
+- is_even(7) should return False
+"""
+
+"""
+PROBLEM 5: [Problem Title/Description]
+[Copy the complete problem description from your AI assistant]
+
+Example:
+Problem: Write a function called 'is_even' that takes an integer and returns 
+True if the number is even, False if it's odd.
+
+Example inputs/outputs:
+- is_even(4) should return True
+- is_even(7) should return False
+"""
+
+"""
+PROBLEM 6: [Problem Title/Description]
+[Copy the complete problem description from your AI assistant]
+
+Example:
+Problem: Write a function called 'is_even' that takes an integer and returns 
+True if the number is even, False if it's odd.
+
+Example inputs/outputs:
+- is_even(4) should return True
+- is_even(7) should return False
+"""
+
+"""
+PROBLEM 7: [Problem Title/Description]
+[Copy the complete problem description from your AI assistant]
+
+Example:
+Problem: Write a function called 'is_even' that takes an integer and returns 
+True if the number is even, False if it's odd.
+
+Example inputs/outputs:
+- is_even(4) should return True
+- is_even(7) should return False
+"""
 
 
 
@@ -84,7 +169,7 @@ print("Testing Problem 1:")
 # Add your tests here
 
 print("\nTesting Problem 2:")
-# Add your tests here
+check_even_odd(32)
 
 print("\nTesting Problem 3:")
 # Add your tests here
