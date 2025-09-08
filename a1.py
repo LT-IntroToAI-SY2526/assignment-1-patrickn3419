@@ -41,61 +41,53 @@ cover..."
 # PART 2: AI-GENERATED PROBLEMS & SOLUTIONS
 # =============================================================================
 
-"""
-PROBLEM 1: Warm-Up: Favorite Color
+#Problem 1
+def favorite_color(name: str, color: str) -> str:
+  """
+  PROBLEM 1: Warm-Up: Favorite Color
 
-Problem: Write a Python program that asks the user for their name and favorite color, then prints a sentence using both inputs.
+  Problem: Write a Python program that asks the user for their name and favorite color, then prints a sentence using both inputs.
 
-Example inputs/outputs:
-Input:
-  Enter your name: Alex
-  Enter your favorite color: blue
+  Example inputs/outputs:
+  Input:
+    favorite_color("Patrick", "red") should return "Hi Patrick! I heard your favorite color is red."
+  """
+  return f"Hi {name}! Your favorite color is {color}."
 
-Output:
-  Hi Alex! I heard your favorite color is blue.
-"""
-def color_form():
-    name = input("Enter your name: ")
-    color = input("Enter you favorite color: ")
-    print("Hi " + name + "! Your favorite color is " + color + ".")
+#Problem 2
+def check_even_odd(number: int) -> str: # def declares a function(variable)
+  """
+  PROBLEM 2: Even or Odd Checker
 
-"""
-PROBLEM 2: Even or Odd Checker
+  Problem: Write a function called check_even_odd(number) that: Takes one parameter: a number, and prints whether the number is even or odd
 
-Problem: Write a function called check_even_odd(number) that: Takes one parameter: a number, and prints whether the number is even or odd
+  Example inputs/outputs:
+    check_even_odd(7) should return "7 is odd."
+    check_even_odd(2) should return "2 is even."
+  """
+  if number % 2 == 0:
+      return f"{number} is even."
+  else:
+      return f"{number} is odd."
 
-Example inputs/outputs:
-Input:
-  Enter a number: 7
+#Problem 3
+def password_checker(password: str) -> str:
+  """
+  PROBLEM 3: Password Checker
+  Problem: Write a program that checks a user-entered password
 
-Output:
-  7 is an odd number.
-"""
-def check_even_odd(number): # def declares a function(variable)
-    if number % 2 == 0:
-        print(f"{number} is even.")
-    else:
-        print(f"{number} is odd.")
+  Example inputs/outputs:
+    password_checker("admin123") should return "Access granted!"
+    password_checker("wrongpassowrd") should return "Access denied"
+    password_checker("") should return "You must enter a password."
+  """
+  if password == "admin123":
+      return "Access granted!"
+  elif password == "":
+      return "You must enter a password."
+  else:
+      return "Access denied."
 
-"""
-PROBLEM 3: Password Checker
-Problem: Write a program that checks a user-entered password
-
-Example inputs/outputs:
-Input:
-  Enter password: admin123
-
-Output:
-  Access granted!
-"""
-def password_check():
-    password = input("Enter password") # Asks the user for a password
-    if password == "admin": # Checks to see if the entered password is "admin"
-        print("Access Granted!")
-    elif password == "": # Elif checks after an if, stands for "else if"
-        print("Please enter a password.")
-    else:
-        print("Access Denied.")
 
 """
 PROBLEM 4: Countdown with a While Loop
