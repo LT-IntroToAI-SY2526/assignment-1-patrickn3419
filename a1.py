@@ -54,9 +54,10 @@ Input:
 Output:
   Hi Alex! I heard your favorite color is blue.
 """
-name = input("Enter your name: ")
-color = input("Enter you favorite color: ")
-print("Hi " + name + "! Your favorite color is " + color + ".")
+def color_form():
+    name = input("Enter your name: ")
+    color = input("Enter you favorite color: ")
+    print("Hi " + name + "! Your favorite color is " + color + ".")
 
 """
 PROBLEM 2: Even or Odd Checker
@@ -87,26 +88,32 @@ Input:
 Output:
   Access granted!
 """
-password = input("Enter password") # Asks the user for a password
-if password == "admin": # Checks to see if the entered password is "admin"
-    print("Access Granted!")
-elif password == "": # Elif checks after an if, stands for "else if"
-    print("Please enter a password.")
-else:
-    print("Access Denied.")
+def password_check():
+    password = input("Enter password") # Asks the user for a password
+    if password == "admin": # Checks to see if the entered password is "admin"
+        print("Access Granted!")
+    elif password == "": # Elif checks after an if, stands for "else if"
+        print("Please enter a password.")
+    else:
+        print("Access Denied.")
 
 """
-PROBLEM 4: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
-
-Example:
-Problem: Write a function called 'is_even' that takes an integer and returns 
-True if the number is even, False if it's odd.
+PROBLEM 4: Countdown with a While Loop
+Problem: Ask the user to enter a positive number, and then count down to 0, printing each number.
 
 Example inputs/outputs:
-- is_even(4) should return True
-- is_even(7) should return False
+Input:
+  Enter a number: 5
+
+Output:
+  5
+  4
+  3
+  2
+  1
+  0
 """
+
 
 """
 PROBLEM 5: [Problem Title/Description]
