@@ -78,7 +78,7 @@ def password_checker(password: str) -> str:
 
   Example inputs/outputs:
     password_checker("admin123") should return "Access granted!"
-    password_checker("wrongpassowrd") should return "Access denied"
+    password_checker("wrongpassowrd") should return "Access denied."
     password_checker("") should return "You must enter a password."
   """
   if password == "admin123":
@@ -88,24 +88,21 @@ def password_checker(password: str) -> str:
   else:
       return "Access denied."
 
+#Problem 4
+def countdown(n: int) -> list[int]:
+  """
+  PROBLEM 4: Countdown with a While Loop
+  Problem: Write a function that takes a positive number and returns a list counting down to 0.
 
-"""
-PROBLEM 4: Countdown with a While Loop
-Problem: Ask the user to enter a positive number, and then count down to 0, printing each number.
-
-Example inputs/outputs:
-Input:
-  Enter a number: 5
-
-Output:
-  5
-  4
-  3
-  2
-  1
-  0
-"""
-
+  Example inputs/outputs:
+  Input:
+    print(countdown(5)) should return [5, 4, 3, 2, 1, 0]
+  """
+  result = []
+  while n >= 0:
+    result.append(n)
+    n -= 1
+  return result
 
 """
 PROBLEM 5: [Problem Title/Description]
@@ -172,12 +169,18 @@ print(f"is_even(7): {is_even(7)}")  # Should print False
 
 print("Testing Problem 1:")
 # Add your tests here
+print(favorite_color("Patrick", "red"))
 
 print("\nTesting Problem 2:")
-check_even_odd(32)
+# Add your tests here
+print(check_even_odd(32))
+print(check_even_odd(981))
 
 print("\nTesting Problem 3:")
 # Add your tests here
+print(password_checker("admin123"))
+print(password_checker("wrongpassowrd"))
+print(password_checker(""))
 
 print("\nTesting Problem 4:")
 # Add your tests here

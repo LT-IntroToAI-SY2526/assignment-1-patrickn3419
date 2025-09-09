@@ -48,9 +48,8 @@ def factorial(n: int) -> int:
         result = result * i
     return result
 
+
 T = TypeVar("T")
-
-
 def every_other(lst: List[T]) -> List[T]:
     """Takes a list and returns a list of every other element in the list, starting with
     the first.
@@ -62,7 +61,13 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    raise NotImplementedError("every_other")
+    #Java way
+    # result = []
+    # for i in range(len(lst)): #i stands for index, len: Length, lst: list
+    #     if i % 2 == 0:
+    #         result.append(lst[i])
+    # return result
+    return lst[::2]
 
 
 def sum_list(lst: List[int]) -> int:
@@ -132,11 +137,8 @@ if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
     assert absolute(34) == 34, "absolute of 34 failed"
     assert factorial(4) == 24, "factorial of 4 failed"
-    assert every_other([1, 2, 3, 4, 5]) == [
-        1,
-        3,
-        5,
-    ], "every_other of [1,2,3,4,5] failed"
+    assert every_other([1, 2, 3, 4, 5]) == [1, 3, 5], "every_other of [1,2,3,4,5] failed"
+    assert every_other([24, 46, 33, 8]) == [24, 33], "every_other of [1,2,3,4,5] failed"
     assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
