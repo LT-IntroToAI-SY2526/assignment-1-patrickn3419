@@ -95,7 +95,6 @@ def countdown(n: int) -> list[int]:
   Problem: Write a function that takes a positive number and returns a list counting down to 0.
 
   Example inputs/outputs:
-  Input:
     print(countdown(5)) should return [5, 4, 3, 2, 1, 0]
   """
   result = []
@@ -104,41 +103,51 @@ def countdown(n: int) -> list[int]:
     n -= 1
   return result
 
-#problem 5
+#Problem 5
+def sum_to_n(n: int) -> int:
+  """
+  PROBLEM 5: Sum of First N Numbers
+  Problem: Write a function that returns the sum of numbers from 1 to n.
 
-"""
-PROBLEM 5: Sum of First N Numbers
-Problem: Write a function that returns the sum of numbers from 1 to n.
+  Example inputs/outputs:
+    print(sum_to_n(5)) should return 15
+  """
+  total = 0
+  for i in range(1, n+1):
+    total += i
+  return total
 
-Example inputs/outputs:
-  print(sum_to_n(5)) should return 15
-"""
+#Problem 6
+def find_max(lst: list[int]) -> int:
+  """
+  PROBLEM 6: Find the Max in a List
+  Problem: Write a function that returns the largest number in a list.
 
-"""
-PROBLEM 6: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
+  Example inputs/outputs:
+    print(find_max([3, 7, 2, 9, 4])) should return 9
+  """
+  if not lst:
+     return None
+  maxnum = lst[0]
+  for num in lst[1:]:
+      if num > maxnum:
+        maxnum = num
+  return maxnum
 
-Example:
-Problem: Write a function called 'is_even' that takes an integer and returns 
-True if the number is even, False if it's odd.
+#Problem 7
+def filter_even(lst: list[int]) -> list[int]:
+  """
+  PROBLEM 7: Filter Even Numbers
+  Problem: Write a function that returns a new list of only the even numbers from a given list.
 
-Example inputs/outputs:
-- is_even(4) should return True
-- is_even(7) should return False
-"""
-
-"""
-PROBLEM 7: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
-
-Example:
-Problem: Write a function called 'is_even' that takes an integer and returns 
-True if the number is even, False if it's odd.
-
-Example inputs/outputs:
-- is_even(4) should return True
-- is_even(7) should return False
-"""
+  Example inputs/outputs:
+    print(filter_even([1, 2, 3, 4, 5, 6])) should return [2, 4, 6]
+  """
+  evens = []
+  for num in lst:
+    if num % 2 == 0:
+        evens.append(num)
+  return evens
 
 
 
@@ -186,5 +195,17 @@ print(countdown(32))
 
 print("\nTesting Problem 5:")
 # Add your tests here
+print(sum_to_n(5))
+print(sum_to_n(32))
+
+print("\nTesting Problem 6:")
+# Add your tests here
+print(find_max([3, 7, 2, 9, 4]))
+print(find_max([12, 43, 1222, 5, 13985]))
+
+print("\nTesting Problem 7:")
+# Add your tests here
+print(filter_even([12, 43, 51, 1, 3423, 55, 1, 3, 2]))
+print(filter_even([1, 2, 3, 4, 5, 6]))
 
 
