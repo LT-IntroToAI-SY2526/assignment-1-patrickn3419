@@ -104,17 +104,14 @@ def countdown(n: int) -> list[int]:
     n -= 1
   return result
 
-"""
-PROBLEM 5: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
+#problem 5
 
-Example:
-Problem: Write a function called 'is_even' that takes an integer and returns 
-True if the number is even, False if it's odd.
+"""
+PROBLEM 5: Sum of First N Numbers
+Problem: Write a function that returns the sum of numbers from 1 to n.
 
 Example inputs/outputs:
-- is_even(4) should return True
-- is_even(7) should return False
+  print(sum_to_n(5)) should return 15
 """
 
 """
@@ -183,6 +180,8 @@ print(password_checker("wrongpassowrd"))
 print(password_checker(""))
 
 print("\nTesting Problem 4:")
+print(countdown(5))
+print(countdown(32))
 # Add your tests here
 
 print("\nTesting Problem 5:")
