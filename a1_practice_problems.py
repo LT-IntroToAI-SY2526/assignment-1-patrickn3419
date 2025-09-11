@@ -97,7 +97,9 @@ def mean(lst: List[int]) -> float:
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    # if lst == []:
+    #     return 0
+    return sum_list(lst) / len(lst) if lst else 0
 
 
 def median(lst: List[int]) -> float:
@@ -112,7 +114,10 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    if len(lst) % 2 == 1:
+        return lst[len(lst) // 2] #Double division = integer division
+    else:
+        return (lst[len(lst) // 2] + lst[len(lst) // 2 - 1]) / 2
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -147,7 +152,10 @@ if __name__ == "__main__":
     assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
     assert sum_list([1, 1, 1, 0]) == 3, "sum_list of [1, 1, 1] failed"
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
+    assert mean([2, 2, 2, 2, 2, 2, 2]) == 2, "mean of [2,2,2,2,2,2,2] failed"
+    assert mean([]) == 0, "mean of [] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
+    assert median([1, 2, 8, 4, 5, 476]) == 6, "median of [1,2,8,4,5,476] failed"
 
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
     assert duck_duck_goose(names) == ["roscoe", "law"]
